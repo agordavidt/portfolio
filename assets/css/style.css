@@ -288,7 +288,8 @@ body {
 }
 
 .hero {
-  background: var(--gradient);
+  background-image: url("../images/hero-bg.jpg");
+  /* background: var(--gradient); */
   padding-block: 100px var(--section-padding);
   min-height: 100vh;
   display: grid;
@@ -395,47 +396,33 @@ body {
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
-.portfolio .section-title {
-  margin-block-end: 18px;
-}
 
-.portfolio .section-text {
-  margin-block-end: 80px;
-}
+.portfolio .section-title { margin-block-end: 18px; }
+
+.portfolio .section-text { margin-block-end: 80px; }
 
 .portfolio-list {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+  display: grid;
+  gap: 60px;
 }
 
 .portfolio-card {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  background-color: var(--independence);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  border-radius: var(--radius-20);
+  font-family: var(--ff-barlow);
+  color: var(--white);
+  font-weight: var(--fw-600);
+  transition: var(--transition-2);
 }
 
-.portfolio-card:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.card-image {
-  flex: 1;
-  background-color: var(--light-gray);
-  border-radius: var(--radius-10);
-  padding: 20px;
-}
-
-.card-content {
-  flex: 1;
-  padding: 20px;
-  background-color: var(--white);
-  border-radius: var(--radius-10);
-  box-shadow: var(--shadow);
-}
+.portfolio-list > li:nth-child(even) .card-content { margin-inline-start: auto; }
 
 .portfolio-card .card-subtitle {
-  color: var(--secondary-color);
+  color: var(--orange-soda);
   margin-block-end: 5px;
 }
 
@@ -453,9 +440,10 @@ body {
 }
 
 .portfolio-card .btn-link ion-icon {
-  color: var(--secondary-color);
+  color: var(--orange-soda);
   font-size: 1.6rem;
 }
+
 
 /*-----------------------------------*\
   #SKILLS
@@ -790,14 +778,14 @@ textarea.contact-input {
 
   .header,
   .header.nav-active {
-    background-color: transparent;
+    background-color: transparent;  
     box-shadow: none;
     height: unset;
     padding-block: 30px;
   }
 
   .header.active {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color);    
     box-shadow: var(--shadow);
     padding-block: 20px;
   }
